@@ -11,74 +11,98 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           width: 500,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8),
-                child: Card(
-                  elevation: 5,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return DetailsPage();
-                      }));
-                    },
-                    child: Container(
-                      width: 500,
-                      height: 50,
-                      child: Center(
-                        child: Text("اذكار الصباح"),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                // Athkar Alsabah
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Card(
+                    elevation: 5,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return DetailsPage();
+                        }));
+                      },
+                      child: Container(
+                        width: 500,
+                        height: 50,
+                        child: Center(
+                          child: Row(
+                            children: [
+                              Image.asset("assets/images/sun.png"),
+                              Text("اذكار الصباح"),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  elevation: 5,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Container(
-                      width: 500,
-                      height: 50,
-                      child: Center(child: Text("اذكار المساء")),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    elevation: 5,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        width: 500,
+                        height: 50,
+                        child: Center(
+                            child: Row(
+                          children: [
+                            Image.asset('assets/images/moon.png'),
+                            Text("اذكار المساء"),
+                          ],
+                        )),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  elevation: 5,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Container(
-                      width: 500,
-                      height: 50,
-                      child: Center(child: Text("اذكار النوم")),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    elevation: 5,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        width: 500,
+                        height: 50,
+                        child: Center(
+                            child: Row(
+                          children: [
+                            Image.asset('assets/images/sleep.png'),
+                            Text("اذكار النوم"),
+                          ],
+                        )),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.all(8),
-                child: Card(
-                  elevation: 5,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Container(
-                      width: 500,
-                      height: 50,
-                      child: Center(child: Text("اذكار مابعد الصلاة")),
+                Container(
+                  padding: EdgeInsets.all(8),
+                  child: Card(
+                    elevation: 5,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        width: 500,
+                        height: 50,
+                        child: Center(
+                            child: Row(
+                          children: [
+                            Image.asset('assets/images/pray.png'),
+                            Text("اذكار مابعد الصلاة"),
+                          ],
+                        )),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ));
   }
